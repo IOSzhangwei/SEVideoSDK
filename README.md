@@ -4,8 +4,8 @@ SEVideoSDK 为开发者提供短视频拍摄功能，支持断点续拍、美颜
 环境搭建
 ====
 下载SEVideoSDK demo在文件夹下找到以下框架：
-  SEVideoSDK.framework
-  SESDK.bundle
+  </br>SEVideoSDK.framework
+  </br>SESDK.bundle
 
 集成SDK
 ====
