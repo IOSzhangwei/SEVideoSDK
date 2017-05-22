@@ -53,3 +53,11 @@ UIViewController * sdk= [sdk createRecordViewControllerWithbitRate:6];
 - (void)SESDK:(id<SESDKDelegate>)sdk compeleteVideoPath:(NSURL *)videoPath thumbnailImage:(UIImage *)thumbnailImage savePhotoAlbum:(BOOL)save
 ```
 其中，videoPath 为最终合成的视频地址 ，thumbnailImage为最终合成视频的缩略图 ，如果保存到相册save 为yes。
+
+问题
+====
+如果你在使用过程中，出现了问题：
+</br>请疯狂issue我
+</br>也可以通过邮件： 18580228790@163.com 联系我
+
+
