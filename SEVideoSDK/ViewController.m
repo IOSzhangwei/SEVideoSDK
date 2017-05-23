@@ -25,13 +25,14 @@
 - (IBAction)sender:(id)sender {
     
     SEVideoSDK *sdk = [SEVideoSDK shared];
+    sdk.delegte = (id<SESDKDelegate>) self;
     sdk.enableBeauty = YES;
     sdk.secameraPosition = SESDKCameraPositionFront;
     sdk.minDuration = 3;
     sdk.maxDuration = 23;
     sdk.savePhotoAlbum=YES;
     
-    sdk.delegte = (id<SESDKDelegate>) self;
+    
     v= [sdk createRecordViewControllerWithbitRate:6];
     [self presentViewController:v animated:YES completion:nil];
 }
