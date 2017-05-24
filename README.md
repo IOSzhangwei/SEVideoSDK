@@ -60,4 +60,7 @@ UIViewController * sdk= [sdk createRecordViewControllerWithbitRate:6];
 </br>请疯狂issue我
 </br>也可以通过邮件： 18580228790@163.com 联系我
 
+更新记录
+=====
+2017.05.24 ---bug：解决切换美颜之后，录制的偶尔崩溃问题。。 优化：增加切换摄像头高斯模糊，在切换瞬间无卡顿现象。
 
