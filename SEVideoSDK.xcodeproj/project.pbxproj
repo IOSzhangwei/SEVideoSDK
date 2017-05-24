@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E85B731E1ED55A20001DC603 /* SEVideoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E85B731D1ED55A20001DC603 /* SEVideoSDK.framework */; };
 		E860230A1ECEAD720039D161 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E86023091ECEAD720039D161 /* main.m */; };
 		E860230D1ECEAD720039D161 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E860230C1ECEAD720039D161 /* AppDelegate.m */; };
 		E86023101ECEAD720039D161 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E860230F1ECEAD720039D161 /* ViewController.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E85B731D1ED55A20001DC603 /* SEVideoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SEVideoSDK.framework; sourceTree = "<group>"; };
 		E86023051ECEAD720039D161 /* SEVideoSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEVideoSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86023091ECEAD720039D161 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E860230B1ECEAD720039D161 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85B731E1ED55A20001DC603 /* SEVideoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		E86022FC1ECEAD720039D161 = {
 			isa = PBXGroup;
 			children = (
+				E85B731D1ED55A20001DC603 /* SEVideoSDK.framework */,
 				E860233B1ECEAD860039D161 /* SESDK.bundle */,
 				E86023071ECEAD720039D161 /* SEVideoSDK */,
 				E86023211ECEAD720039D161 /* SEVideoSDKTests */,
