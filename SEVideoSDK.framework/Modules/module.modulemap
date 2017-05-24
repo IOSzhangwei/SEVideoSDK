@@ -1,6 +1,0 @@
-framework module SEVideoSDK {
-  umbrella header "SEVideoSDK.h"
-
-  export *
-  module * { export * }
-}
