@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
-#import <SEVideoSDK/SEVideoSDK.h>
-@interface ViewController (){
-    UIViewController *v;
+#import "SERecordViewController.h"
+#import "SEParameterModel.h"
+@interface ViewController ()<SERecordDelegate>{
+   
 }
 
 @end
@@ -24,29 +25,24 @@
 
 - (IBAction)sender:(id)sender {
     
-    SEVideoSDK *sdk = [SEVideoSDK shared];
-    sdk.delegte = (id<SESDKDelegate>) self;
-    sdk.enableBeauty = YES;
-    sdk.secameraPosition = SESDKCameraPositionFront;
-    sdk.minDuration = 3;
-    sdk.maxDuration = 23;
-    sdk.savePhotoAlbum=YES;
+   SEParameterModel *model =[[SEParameterModel alloc] init];;
+   model.enableBeauty = YES;
+   model.cameraPosition = SESDKCameraPositionFront;
+   model.minDuration = 3;
+   model.maxDuration = 23;
+   model.savePhotoAlbum=YES;
     
+    SERecordViewController *s =[[SERecordViewController alloc] initWithParameter:model];
+    s.recordDelegate = self;
+   [self presentViewController:s animated:YES completion:nil];
     
-    v= [sdk createRecordViewControllerWithbitRate:6];
-    [self presentViewController:v animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)compeleteVideoPath:(NSURL *)videoPath thumbnailPath:(UIImage *)thumbnailPath savePhotoAlbum:(BOOL)save{
+    NSLog(@"保存的视频路径为====%@",videoPath);
 }
 
-- (void)SESDK:(id<SESDKDelegate>)sdk compeleteVideoPath:(NSURL *)videoPath thumbnailImage:(UIImage *)thumbnailImage savePhotoAlbum:(BOOL)save{
-    //  [v.navigationController popViewControllerAnimated:YES];
-    [v dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"视频保存的路径为====%@",videoPath);
-    //   imgView.image = thumbnailImage;
-}
+
 
 @end
