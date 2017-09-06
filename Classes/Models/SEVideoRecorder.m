@@ -54,7 +54,7 @@
 -(instancetype)initWithView:(UIView *)view parameter:(SEParameterModel *)model{
     if ([super init]) {
         _model = model;
-        _beauty = YES; //默认有美颜
+        _beauty = _model.enableBeauty; //默认有美颜
         [self initSession:view];
     }
     
@@ -113,7 +113,11 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         _movieWriter = [[GPUImageMovieWriter alloc] initWithMovieURL:movieURL size:CGSizeMake(SEWIDTH, SEHEIGHT)];
         _movieWriter.encodingLiveVideo = YES;
-        [_filter addTarget:_movieWriter];
+        if (_model.enableBeauty) {
+            [_filter addTarget:_movieWriter];
+        }else{
+            [self.videoCamera addTarget:_movieWriter];
+        }
         [_videoCamera addAudioInputsAndOutputs];
         _movieWriter.shouldPassthroughAudio = YES;
         _videoCamera.audioEncodingTarget = _movieWriter;
